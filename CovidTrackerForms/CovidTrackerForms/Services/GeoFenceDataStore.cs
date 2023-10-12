@@ -16,7 +16,7 @@ namespace CovidTrackerForms.Services
         public GeoFenceDataStore()
         {
             client = new HttpClient();
-            client.BaseAddress = new Uri("https://www.ordinarygeeks.com/CMEDemo/");
+            client.BaseAddress = new Uri("https://www.ordinarygeeks.com/");
 
 
         }
@@ -30,7 +30,7 @@ namespace CovidTrackerForms.Services
 
             if (IsConnected)
             {
-                var json = await client.GetStringAsync($"api/Places/");
+                var json = await client.GetStringAsync($"api/Place/");
                 return await Task.Run(() => JsonConvert.DeserializeObject<List<GeoFence>>(json));
             }
 
@@ -44,7 +44,7 @@ namespace CovidTrackerForms.Services
 
             var serializedItem = JsonConvert.SerializeObject(checkIn);
 
-            var response = await client.PostAsync($"api/CheckIns/" , new StringContent(serializedItem, Encoding.UTF8, "application/json"));
+            var response = await client.PostAsync($"api/CheckIn/" , new StringContent(serializedItem, Encoding.UTF8, "application/json"));
 
             return response.IsSuccessStatusCode;
         }

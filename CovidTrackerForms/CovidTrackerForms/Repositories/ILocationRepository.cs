@@ -11,7 +11,7 @@ namespace CovidTrackerForms.Repositories
 
         Task Save(Location location);
         Task<List<Location>> GetAllLocations();
-        Task<List<GeoFence>> GetAllGeoFences();
+   
 
 
 

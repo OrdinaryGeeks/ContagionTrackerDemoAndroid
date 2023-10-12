@@ -35,7 +35,7 @@ namespace CovidTrackerForms.Droid.Services
         public override bool OnStartJob(JobParameters @params)
         {
 
-            locationManager = (LocationManager)ApplicationContext.GetSystemService (Context.LocationService);
+          locationManager = (LocationManager)ApplicationContext.GetSystemService (Context.LocationService);
 
             locationManager.RequestLocationUpdates(LocationManager.GpsProvider, 10L, 0.01f, this);
             return true;

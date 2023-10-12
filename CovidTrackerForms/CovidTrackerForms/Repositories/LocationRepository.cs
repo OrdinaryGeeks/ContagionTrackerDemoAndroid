@@ -40,14 +40,6 @@ namespace CovidTrackerForms.Repositories
             return locations;
         }
 
-        public async Task<List<GeoFence>> GetAllGeoFences()
-        {
-
-
-
-            return  new List<GeoFence>();
-
-
-        }
+       
     }
 }

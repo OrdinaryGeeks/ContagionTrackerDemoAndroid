@@ -7,8 +7,6 @@ namespace CovidTrackerForms.Services
     public interface ILocationTrackingService
     {
 
-
-
         void StartTracking();
     }
 }

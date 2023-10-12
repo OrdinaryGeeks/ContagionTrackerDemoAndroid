@@ -43,7 +43,7 @@ namespace CovidTrackerForms.Views
         {
             if (geoFence != null && geoFence.Title != "")
             {
-                Models.CheckIn checkedIn = new Models.CheckIn { userCMEID = 6, placeID = geoFence.ID, BeginTime = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc) , EndTime = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc) };
+                Models.CheckIn checkedIn = new Models.CheckIn { userCMEID = 1, placeID = geoFence.ID, BeginTime = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc) , EndTime = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc) };
 
                 //Task.Run(async () => { await CovidTrackerForms.Services.Global.geoFenceDataStormForms.PostCheckInAsync(checkedIn); });
 

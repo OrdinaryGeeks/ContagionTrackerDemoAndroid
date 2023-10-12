@@ -13,7 +13,6 @@ namespace CovidTrackerForms
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = Resolver.Resolve<MainView>();
         }
 

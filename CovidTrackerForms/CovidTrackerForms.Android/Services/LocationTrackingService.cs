@@ -22,7 +22,7 @@ namespace CovidTrackerForms.Droid.Services
         public void StartTracking()
         {
             var javaClass = Java.Lang.Class.FromType(typeof(LocationJobService));
-            var componentName = new ComponentName(Android.App.Application.Context,            javaClass);
+            var componentName = new ComponentName(Android.App.Application.Context,javaClass);
             var jobBuilder = new JobInfo.Builder(1, componentName);
             jobBuilder.SetOverrideDeadline(1000);
             jobBuilder.SetPersisted(true);

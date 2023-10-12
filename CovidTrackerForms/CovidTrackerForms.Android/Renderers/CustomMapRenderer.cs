@@ -118,7 +118,7 @@ namespace CovidTrackerForms.Droid.Renderers
 
                     
                 }
-             //   Control.GetMapAsync(this);
+                Control.GetMapAsync(this);
             }
 
         }

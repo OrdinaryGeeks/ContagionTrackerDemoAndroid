@@ -26,7 +26,7 @@ namespace CovidTrackerForms.Droid.Services
         public GeoFenceDataStore()
         {
             client = new HttpClient(new AndroidClientHandler());
-            client.BaseAddress = new Uri("https://www.ordinarygeeks.com/CMEDemo/");
+            client.BaseAddress = new Uri("https://www.ordinarygeeks.com/");
 
 
         }
@@ -40,7 +40,7 @@ namespace CovidTrackerForms.Droid.Services
 
             if (IsConnected)
             {
-                var json = await client.GetStringAsync($"api/Places/");
+                var json = await client.GetStringAsync($"api/Place/");
                 return await Task.Run(() => JsonConvert.DeserializeObject<List<GeoFence>>(json));
             }
 

@@ -9,10 +9,13 @@ namespace CovidTrackerForms.Controls
 {
     public class CustomMap : Map
     {
+        
         public static BindableProperty GeoFenceProperty =
             BindableProperty.Create(nameof(GeoFences), typeof(List<GeoFence>), typeof(CustomMap), new List<GeoFence>());
 
-        public List<Models.GeoFence> GeoFences
+
+        public Location location { get; set; }
+        public List<GeoFence> GeoFences
         {
             get => GetValue(GeoFenceProperty) as List<GeoFence>;
             set => SetValue(GeoFenceProperty, value);
